@@ -93,16 +93,42 @@ left:20%;}
 }
 @media only screen and (max-width:786px)
 {
+.one{
+height: 60px;
+}
 h1
 {
+font-size:11vw;
 animation:none;
 }
 h3
 {
+//font-family:cursive;
+font-size:8vw;
+left:30vw;
 animation: drop 2s linear forwards;
+}
+@keyframes drop
+{
+0%{transform:translateY(0px);}
+100%{transform:translateY(60px);}
 }
 .image
 {
-top:20vh;
+top:-40vh;
+//top:23vh;
+animation: image 1.5s 2.5s forwards;
+}
+@keyframes image
+{
+0%{
+top:-40vh
+}
+70%{
+top:25vh;
+}
+100%{
+top:23vh;
+}
 }
 }
