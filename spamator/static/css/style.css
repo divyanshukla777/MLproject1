@@ -43,6 +43,7 @@ font-size:30px;
 font-weight:500;
 //transform:translateY(-30px);
 position:absolute;
+text-transform:uppercase;
 //border:2px solid green;
 top:40vh;
 left: 45%;
@@ -119,9 +120,11 @@ animation:none;
 h3
 {
 //font-family:cursive;
-font-size:8vw;
-left:30vw;
-animation: drop 2s linear forwards;
+text-transform:none;
+font-family: 'Lobster', cursive;
+font-size:9vw;
+left:33vw;
+animation: drop 1.5s linear forwards;
 }
 @keyframes drop
 {
@@ -132,7 +135,7 @@ animation: drop 2s linear forwards;
 {
 top:-40vh;
 //top:23vh;
-animation: image 1.5s 2.5s forwards;
+animation: image 1.5s 2s forwards;
 }
 @keyframes image
 {
@@ -143,6 +146,6 @@ top:-40vh
 top:22vh;
 }
 100%{
-top:16vh;
+top:14vh;
 }
 }
