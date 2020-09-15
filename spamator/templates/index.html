@@ -21,17 +21,35 @@
     </div>
     <h3>Spamator</h3>
 </div>
-<header>
-<h2>...........</h2>
-</header>
-</body>
+{% if messages %}
+    {% for message in messages %}
+        {% if message.tags == 'success' %}
+            <h3 align="center" style="text-color:red">SPAM</h3>
+        {% endif %}
+        {% endfor %}
+{% else %}
 <script>
-    $(document).ready(function(){
-        function dis()
-        {
-            $('.front').fadeOut(500);
-        };
-        window.setTimeout(dis,7000);
-    });
+            $(document).ready(function(){
+                function dis()
+                {
+                    $('.front').fadeOut(500);
+                };
+                $('.front').css("display","block");
+                window.setTimeout(dis,7000);
+            });
 </script>
+{% endif %}
+<div>
+<center>
+    <span style="font-size:100px; margin-top:50px;">SMS Spam Classifier</span>
+    <form method="post" action="{% url 'checksms' %}">
+        {% csrf_token %}
+        <br/>
+        <input type="text" name="smstext" placeholder="Enter your SMS here" required/>
+        <br/>
+        <input type="submit" value="CHECK"/>
+    </form>
+</center>
+</body>
+
 </html>
