@@ -40,7 +40,7 @@ h3
 {
 color:maroon;
 font-size:30px;
-font-weight:300;
+font-weight:500;
 //transform:translateY(-30px);
 position:absolute;
 //border:2px solid green;
@@ -72,10 +72,25 @@ z-index:1;
 height:13vh;
 width:13vh;
 position:absolute;
-top:23vh;
+top:-40vh;
 left: 50%;
 transform: translate(-50%, 0);
+animation: image 2s 4.5s forwards;
 }
+@keyframes image
+{
+0%{
+top:-40vh
+}
+70%{
+top:25vh;
+}
+100%{
+top:20vh;
+}
+}
+
+
 @media only screen and (max-width:1024px)
 {
 h1
@@ -125,10 +140,9 @@ animation: image 1.5s 2.5s forwards;
 top:-40vh
 }
 70%{
-top:25vh;
+top:22vh;
 }
 100%{
-top:23vh;
-}
+top:16vh;
 }
 }
