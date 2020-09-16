@@ -179,12 +179,12 @@ margin-top:30px;
 }
 .input-box1
 {
-height:35px;
+height:40px;
 width:230px;
 text-align:center;
 background-color:white;
-border:2px solid black;
-//border-radius:5px;
+border:1px solid black;
+border-radius:5px;
 outline:none;
 margin-top:30px;
 }
@@ -202,7 +202,7 @@ margin-top:30px;
 border:none;
 cursor:pointer;
 background-color:#293747;
-//border-radius:100px;
+border-radius:100px;
 }
 .check-btn-one:hover
 {
