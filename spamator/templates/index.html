@@ -54,11 +54,11 @@
         {% endfor %}
 {% else %}
 <script>
-            $('.front-animation').css("display","block");
+            //$('.front-animation').css("display","block");
             $(document).ready(function(){
                 function dis()
                 {
-                    $('.front-animation').fadeOut(500);
+                    //$('.front-animation').fadeOut(500);
                 };
                 window.setTimeout(dis,7000);
             });
@@ -72,7 +72,7 @@
     </header>
     <center>
         <br/><br/><br/><br/>
-        <h1 class="head-one">SMS Spam Classifier</h1>
+        <div class="head-one-div"><h1 class="head-one">SMS Spam Classifier</h1></div>
     <div class="input-form-div">
         <img class="mailbox-image" src="{% static 'images/sms2.png' %}" />
         <form method="post" action="{% url 'checksms' %}">
