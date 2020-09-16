@@ -530,6 +530,11 @@ margin-top:40px;
 {
 margin-top:1px;
 }
+.mailbox-image
+{
+height:13vh;
+width:13vh;
+}
 .image
 {
 top:-40vh;
