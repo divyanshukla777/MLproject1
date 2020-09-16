@@ -11,10 +11,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link href="{% static 'images/logo.png' %}" rel="icon" />
     <link href="{% static 'css/style.css' %}" rel="stylesheet" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>-->
     <title>SMS-Spam-Classifier</title>
 </head>
 <body>
@@ -33,7 +33,7 @@
         {% endfor %}
 {% else %}
 <script>
-            //$('.front').css("display","block");
+            $('.front').css("display","block");
             $(document).ready(function(){
                 function dis()
                 {
@@ -44,8 +44,10 @@
 </script>
 {% endif %}
 <div class="main">
-    <img class="header-logo-image" src="{% static 'images/logo.png' %}"/>
-    <span class="header-text">pamator</span>
+    <header>
+        <img class="header-logo-image" src="{% static 'images/logo.png' %}"/>
+        <div class="header-text-div"><span class="header-text">pamator</span></div>
+    </header>
     <hr style="margin-top:5px;border:0.1px solid silver;background-color:silver;">
     <center>
     <div class="main-one">

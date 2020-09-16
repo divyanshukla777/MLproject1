@@ -125,22 +125,37 @@ z-index:5;
 }
 .header-logo-image
 {
-height:11vh;
-width:11vh;
+height:7vh;
+width:7vh;
 margin-left:2vw;
-//margin-top:1vh;
+//position:absolute;
+float:left;
+margin-top:1.5vh;
+top:2vh;
 //border:2px solid black;
+}
+header
+{
+height:75px;
+width:100%;
 }
 .header-text
 {
-font-size:70px;
+font-size:7vh;
 //font-color:#212121;
-font-weight:900;
-//margin-left:40px;
-margin-top:500px;
-//border:2px solid black;
+font-weight:200;
 //color:#b32333;
 font-family:'Lobster', cursive;
+}
+.header-text-div
+{
+height:8vh;
+width:189px;
+margin-left:5px;
+text-align:left;
+float:left;
+
+//border:2px solid black;
 }
 .input-box1
 {
@@ -150,6 +165,7 @@ text-align:center;
 background-color:white;
 border:2px solid black;
 //border-radius:5px;
+outline:none;
 margin-top:40px;
 }
 .check-btn-one
@@ -392,6 +408,27 @@ animation: drop 1.5s forwards;
 {
 0%{top:40vh;}
 100%{top:46vh;}
+}
+.header-logo-image
+{
+height:5vh;
+width:5vh;
+top:1vh;
+}
+.header-text
+{
+font-size: 5vh;
+}
+.header-text-div
+{
+margin-top:3px;
+height:5vh;
+//margin-left:auto;
+}
+header
+{
+height:50px;
+text-align:center;
 }
 .image
 {
