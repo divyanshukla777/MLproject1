@@ -7,5 +7,9 @@ def index(request):
 
 def checksms(request):
     sms=request.POST['smstext']
-    messages.warning(request,'0')
+    result=sms
+    if result == '1':  #Ham
+        messages.success(request, '0')
+    else:            #Spam
+        messages.warning(request, '0')
     return redirect('index')
