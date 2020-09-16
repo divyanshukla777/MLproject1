@@ -11,6 +11,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link href="{% static 'images/logo.png' %}" rel="icon" />
     <link href="{% static 'css/style.css' %}" rel="stylesheet" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
     <title>SMS-Spam-Classifier</title>
 </head>
 <body>
@@ -23,25 +27,27 @@
 </div>
 {% if messages %}
     {% for message in messages %}
-        {% if message.tags == 'success' %}
+        {% if message.tags == 'warning' %}
             <h2 align="center" style="text-color:red">SPAM</h2>
         {% endif %}
         {% endfor %}
 {% else %}
 <script>
-            $('.front').css("display","block");
+            //$('.front').css("display","block");
             $(document).ready(function(){
                 function dis()
                 {
-                    //$('.front').fadeOut(500);
+                    $('.front').fadeOut(500);
                 };
                 window.setTimeout(dis,7000);
             });
 </script>
 {% endif %}
 <div class="main">
-<center>
-    <span class="main-text">SMS Spam Classifier</span>
+    <img class="header-logo-image" src="{% static 'images/logo.png' %}"/>
+    <span class="header-text">pamator</span>
+    <hr style="margin-top:5px;border:0.1px solid silver;background-color:silver;">
+    <center>
     <div class="main-one">
         <img class="mailbox-image" src="{% static 'images/sms2.png' %}" />
         <form method="post" action="{% url 'checksms' %}">
@@ -53,6 +59,56 @@
     </form>
     </div>
 </center>
+<!-- Site footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-6">
+            <h6>About Spamator</h6>
+            <p class="text-justify">Spamator is an initiative  to help the users indentify whether a SMS is a spam or a legitimate message. To solve this problem, we proposed a spam filtering method using Naïve Bayes classification Algorithm which can be
+implemented as a web application to filter incoming messages into spam and ham.  </p>
+          </div>
+
+          <div class="col-xs-6 col-md-3">
+              <h6>Spam-Classifier</h6>
+            <ul class="footer-links">
+              <li>Machine Learning Project</li>
+              <li>B.tech 3rd year (5th Semester)</li>
+              <li>Department of CSE</li>
+              <li>KNIT, Sultanpur.</li>
+            </ul>
+          </div>
+
+          <div class="col-xs-6 col-md-3">
+            <h6>Our Team</h6>
+            <ul class="footer-links">
+                <li>Aviral Singh - 18216</li>
+              <li>Chakresh Varshney - 18217</li>
+              <li>Divyanshu Shukla - 18218</li>
+              <li>Garima Ahuja - 18219</li>
+            </ul>
+          </div>
+        </div>
+        <hr>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-sm-6 col-xs-12">
+            <p class="copyright-text">Copyright &copy; 2017 All Rights Reserved by
+                Spamator
+            </p>
+          </div>
+
+          <div class="col-md-4 col-sm-6 col-xs-12">
+            <ul class="social-icons">
+              <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+              <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+              <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+</footer>
 </div>
 
 </body>

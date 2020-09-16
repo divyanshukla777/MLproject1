@@ -7,5 +7,5 @@ def index(request):
 
 def checksms(request):
     sms=request.POST['smstext']
-    messages.success(request,'0')
+    messages.warning(request,'0')
     return redirect('index')
