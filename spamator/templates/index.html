@@ -33,7 +33,7 @@
         {% endfor %}
 {% else %}
 <script>
-            $('.front').css("display","block");
+            //$('.front').css("display","block");
             $(document).ready(function(){
                 function dis()
                 {
@@ -44,13 +44,14 @@
 </script>
 {% endif %}
 <div class="main">
+    <!-- Header -->
     <header>
         <img class="header-logo-image" src="{% static 'images/logo.png' %}"/>
         <div class="header-text-div"><span class="header-text">pamator</span></div>
     </header>
-    <hr style="margin-top:5px;border:0.1px solid silver;background-color:silver;">
     <center>
-    <div class="main-one">
+        <h1 class="heading">SMS Spam Classifier</h1>
+    <div class="input-form-div">
         <img class="mailbox-image" src="{% static 'images/sms2.png' %}" />
         <form method="post" action="{% url 'checksms' %}">
         {% csrf_token %}
