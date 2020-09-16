@@ -6,7 +6,7 @@ def index(request):
     return render(request,'index.html')
 
 def checksms(request):
-    sms=request.POST['smstext']
+    sms=request.POST.get('smstext','Guest')
     result=sms
     if result == '1':  #Ham
         messages.success(request, '0')
