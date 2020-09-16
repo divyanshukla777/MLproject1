@@ -445,6 +445,19 @@ font-size:50px;
 {
 font-size:30px;
 }
+.main
+{
+overflow:hidden;
+}
+header
+{
+height:130px;
+}
+.mailbox-image
+{
+height:8vh;
+width:8vh;
+}
 @keyframes exp
 {
 0%{letter-spacing:8px;
