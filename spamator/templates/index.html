@@ -29,12 +29,12 @@
         {% endfor %}
 {% else %}
 <script>
+            $('.front').css("display","block");
             $(document).ready(function(){
                 function dis()
                 {
-                    $('.front').fadeOut(500);
+                    //$('.front').fadeOut(500);
                 };
-                $('.front').css("display","block");
                 window.setTimeout(dis,7000);
             });
 </script>
@@ -43,7 +43,7 @@
 <center>
     <span class="main-text">SMS Spam Classifier</span>
     <div class="main-one">
-        <img class="image1" src="{% static 'images/sms2.png' %}" />
+        <img class="mailbox-image" src="{% static 'images/sms2.png' %}" />
         <form method="post" action="{% url 'checksms' %}">
         {% csrf_token %}
         <br/>
